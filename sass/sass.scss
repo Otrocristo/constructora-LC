@@ -1,0 +1,817 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+.estilosInicio {
+    background-image: url(../img1/fondoinicio.jpg);
+    background-position-y: 60%;
+ 
+
+    header .logo {
+        position: relative;
+        top: 50%;
+        left: 30%;
+    }
+
+    .menu {
+        width: 50%;
+        list-style: none;
+        text-align: center;
+        position: relative;
+        top: 45%;
+        left: 15%;
+        font-size: 35px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+       
+        li a {
+            text-decoration: none;
+            color: #ffd28f;
+            padding: 15px;
+            border-left: 0.5px #ffd28f solid;
+            border-right: 0.5px #ffd28f solid;
+
+        }
+
+    }
+
+    .redes {
+        position: relative;
+        left: 0.5%;
+    }
+
+}
+
+// media inicio
+
+@media (max-width: 1024px) {
+    
+    .estilosInicio {
+        background-image: none;
+        background-color: gray;
+     
+    
+        header .logo {
+            position: relative;
+            top: 50%;
+            left: 5%;
+            width: 100px;
+        }
+        
+       
+        .menu {
+            width: 100%;
+            list-style: none;
+            text-align: center;
+            position: relative;
+            top: 45%;
+            left: auto;
+            font-size: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            
+
+        
+           
+            li a {
+                text-decoration: none;
+                color: #ffd28f;
+                padding: 15px;
+                border: none;
+    
+            }
+        
+        }
+    
+    }
+}
+
+@media (max-width: 768px) {
+    
+.mainInicio {
+    display: grid;
+    grid-template-areas: 
+    "Mu"
+    "Md"
+    "Mt" ;
+
+    .mainInicioUno {
+        grid-area: Mu;
+        position: relative;
+
+        .mainInicioImagen {
+            border-radius: 6%;
+            width: 300px;
+        }
+    }
+
+    .mainInicioDos {
+       margin: auto;
+       grid-area: Md;
+        .titulo {
+            font-size: 1fr;
+            color: #cd0707;
+            width: 200px;
+        }
+        
+        .parrafoInicioUno {
+            font-size: 15px;
+            padding-top: 10%;
+            width: 350px;
+        }
+    }
+    
+    .mainInicioTres {
+       margin: 90px 5px;
+       border-left: 0.5px #8b1717 solid;
+       grid-area: Mt;
+
+       .Pmain {
+        font-size: 20px;
+        padding: 20px 30px;
+        font-style: italic;
+       }
+       
+      
+       .linkMainUno {
+        color: #cd0707;
+       }
+    }
+}
+
+
+
+.asideInicio {
+    display: grid;
+    grid-template-areas: 
+    "Au"
+    "Ad"
+    "At";
+    background-color: #8b1717;
+
+    .asideInicioUno {
+        margin: 90px 40px;
+        grid-area: Au;
+
+        .asideInicioImagen {
+            border-radius: 6%;
+            width: 300px;
+        }
+    }
+
+    .asideInicioDos {
+       margin: 90px 5px;
+       grid-area: Ad;
+        .tituloDos {
+            font-size: 1fr;
+            color: #ffd28f;
+            font-weight: 1300;
+            width: 100%;
+        }    
+    }
+
+    .asideInicioTres {
+        margin: 90px 5px;
+        border-left: 0.5px #cd0707 solid;
+        grid-area: At;
+ 
+        .Paside {
+         font-size: 20px;
+         padding: 20px 30px;
+         font-style: italic;
+         color: #ffd28f;
+         background-color: black;
+        }
+        
+        .linkAside {
+            color: white;
+        }
+    }
+ 
+}
+}
+
+@media (max-width: 1023px) {
+    .mainInicio {
+        display: grid;
+        grid-template-areas: 
+        "Mu"
+        "Md"
+        "Mt" ;
+    
+        .mainInicioUno {
+            grid-area: Mu;
+            position: relative;
+    
+            .mainInicioImagen {
+                border-radius: 6%;
+                width: 150px;
+            }
+        }
+    }    
+}
+// VARIABLES
+
+$BordoOscuro: #66190e;
+$RojoOscuro: #8b1717;
+$Amarillo: #ffd28f;
+
+// ESTILOS INDEX 
+
+.mainInicio {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+
+    .mainInicioUno {
+        margin: 90px 40px;
+
+        .mainInicioImagen {
+            border-radius: 6%;
+        }
+    }
+
+    .mainInicioDos {
+       margin: 90px 5px;
+        .titulo {
+            font-size: 1fr;
+            color: #cd0707;
+            font-weight: 1300;
+        }
+        
+        .parrafoInicioUno {
+            font-size: 25px;
+            padding-top: 10%;
+            width: 350px;
+        }
+    }
+    
+    .mainInicioTres {
+       margin: 90px 5px;
+       border-left: 0.5px #8b1717 solid;
+
+       .Pmain {
+        font-size: 20px;
+        padding: 20px 30px;
+        font-style: italic;
+        background-color: $Amarillo;
+       }
+       
+      
+       .linkMainUno {
+        color: #cd0707;
+       }
+    }
+}
+
+.asideInicio {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    background-color: #8b1717;
+
+    .asideInicioUno {
+        margin: 90px 40px;
+
+        .asideInicioImagen {
+            border-radius: 6%;
+        }
+    }
+
+    .asideInicioDos {
+       margin: 90px 5px;
+        .tituloDos {
+            font-size: 1fr;
+            color: #ffd28f;
+            font-weight: 1300;
+        }    
+    }
+    
+    .asideInicioTres {
+        margin: 90px 5px;
+        border-left: 0.5px #cd0707 solid;
+ 
+        .Paside {
+         font-size: 20px;
+         padding: 20px 30px;
+         font-style: italic;
+         color: #ffd28f;
+        }
+        
+        .linkAside {
+            color: white;
+        }
+    }
+ 
+}
+
+// ESTILOS PAGINA SERVICIOS
+
+.estilosServicios {
+    @extend .estilosInicio;
+    background-image: url(../img1/fondoservicios.jpg);
+
+    .logoS {
+        @extend .logo;
+    }
+
+    .menuS {
+        @extend .menu;
+
+        .botonS {
+            background-color: $BordoOscuro;
+        }
+    }
+
+    .redesS {
+        @extend .redes;
+    }
+}
+
+.mainServicios {
+    @extend .mainInicio;
+    background: linear-gradient(to top, $BordoOscuro, $RojoOscuro, white, white, white, white, white);
+    .mainServiciosUno {
+        @extend .mainInicioUno;
+
+      .mainServiciosImagen {
+        @extend .mainInicioImagen;
+        }
+    }
+
+    .mainServiciosDos {
+        @extend .mainInicioDos;
+    
+
+      .tituloS {
+        @extend .titulo;
+        }
+
+      .parrafoServiciosUno {
+        @extend .parrafoInicioUno;
+        }
+    }
+
+    .mainServiciosTres {
+        @extend .mainInicioTres;
+        border: 0px;
+    
+      .PmainS {
+        @extend .Pmain;
+        border-radius: 15%;
+        }
+
+      .PmainSer {
+        @extend .PmainS;
+      }
+
+    }
+}
+
+.asideServicios {
+    @extend .asideInicio;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: $BordoOscuro;
+    
+
+    .tituloTres {
+        color: $Amarillo;
+        font-size: 60px;
+    }
+
+    .TaU {
+        color: $Amarillo;
+        border-bottom: 0.5px $Amarillo solid;
+        font-size: 30px;
+        width: 530px;
+        position: relative;
+        top: 10%;
+    }
+
+    .asideServiciosImagen {
+        position: relative;
+        top: 28%;
+        border-radius: 6%;
+    }
+
+    .PasideS {
+        color: white;
+        font-size: 20px;
+        position: relative;
+        top: 15%;
+        width: 400px;
+    }
+}
+
+// media servicios
+
+@media (max-width: 1023px) {
+    .estilosServicios {
+        @extend .estilosInicio;
+        background-image: none;
+        background-color: grey;
+    }
+
+    .asideServicios {
+        position: absolute;
+        top: -1000%;
+    }
+
+    .mainServicios {
+        @extend .mainInicio;
+        background: linear-gradient(to top, $BordoOscuro, $RojoOscuro, white, white, white, white, white);
+        .mainServiciosUno {
+            @extend .mainInicioUno;
+    
+          .mainServiciosImagen {
+            @extend .mainInicioImagen;
+            }
+        }
+    
+        .mainServiciosDos {
+            @extend .mainInicioDos;
+        
+    
+          .tituloS {
+            @extend .titulo;
+            }
+    
+          .parrafoServiciosUno {
+            @extend .parrafoInicioUno;
+            }
+        }
+    
+        .mainServiciosTres {
+            @extend .mainInicioTres;
+            border: 0px;
+
+            .PmainS {
+                @extend .Pmain;
+                border-radius: 15%;
+                width: 200px-;
+                }
+        
+              .PmainSer {
+                @extend .PmainS;
+              }
+        
+            }
+        }
+
+}
+
+
+
+// ESTILOS TRABAJOS
+
+.estilosTrabajos {
+    @extend .estilosInicio;
+    background-image: url(../img1/fondotd.jpg);
+    
+
+    .logoT {
+        @extend .logo;
+    }
+
+    .menuT {
+        @extend .menu;
+
+        .botonT {
+            background-color: $BordoOscuro;
+        }
+    }
+
+    .redesT {
+        @extend .redes;
+    }
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px 20px 0 20px;
+
+    
+    .encabezado {
+    width: 50%;
+    padding-bottom: 50px;
+
+    .tituloTD {
+    font-size: 1fr;
+    font-weight: bolder;
+    border-bottom: 3px solid $RojoOscuro;
+    color: $RojoOscuro;
+    padding-bottom: 10px;
+     }
+    }
+
+     
+    .caja{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        }
+        
+        .caja .trabajos{
+        display: flex;
+        flex-direction: column;
+        width: 32.5%;
+        }
+        
+        .caja .trabajos img{
+        width: 100%;
+        padding-bottom: 15px;
+        border-radius: 5px;
+        }
+    }
+    
+    // ESTILOS NOSOTROS
+
+    .gn {
+        margin: 100px 50px;
+        display: grid;
+        grid-template-areas: 
+        "parra imgn";
+
+        .parrafon {
+            font-size: 30px;
+            color: $BordoOscuro;
+            width: 50%;
+            position: relative;
+            left: 1%;
+            grid-area: parra;
+        }
+        
+        .imgn {
+            grid-area: imgn;
+            position: absolute;
+            right: 10%;
+            border-radius: 7px;
+        }
+    }
+
+// media nosotros 
+
+@media (max-width: 768px) {
+    .gn {
+        margin: 100px 50px;
+        display: grid;
+        grid-template-areas: 
+        "parra imgn";
+
+        .parrafon {
+            font-size: 15px;
+            color: $BordoOscuro;
+            width: 100%;
+            position: relative;
+            left: 1%;
+            grid-area: parra;
+            text-align: center;
+        }
+        
+        .imgn {
+            grid-area: imgn;
+            position: absolute;
+            top: -100%;
+            border-radius: 7px;
+        }
+    }
+
+}
+
+@media (max-width: 1023px) {
+    .gn {
+        margin: 100px 50px;
+        display: grid;
+        grid-template-areas: 
+        "parra imgn";
+
+        .parrafon {
+            font-size: 15px;
+            color: $BordoOscuro;
+            width: 100%;
+            position: relative;
+            left: 1%;
+            grid-area: parra;
+            text-align: center;
+        }
+        
+        .imgn {
+            grid-area: imgn;
+            position: absolute;
+            top: -100%;
+            border-radius: 7px;
+        }
+    }
+
+}
+    
+    
+// ESTILOS CONTACTO
+
+.contacto {
+    background: linear-gradient(to bottom, white, $Amarillo);
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+   
+    .tablaContacto {
+        background-color: $RojoOscuro;
+        width: 450px;
+        margin: auto;
+        padding: 20px 40px;
+        border-radius: 7px;
+
+        .TC {
+            color: $Amarillo;
+            text-align: center;
+            margin: 0;
+            font-size: 20px;
+        }
+    }
+
+    .formulario {
+        width: 450px;
+        margin: auto;
+        background-color: $RojoOscuro;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        margin-top: 20px;
+        border-radius: 7px;
+
+        .TF {
+            color: $Amarillo;
+            text-align: center;
+            margin: 0;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 7px;
+            box-sizing: border-box;
+            font-size: 17px;
+        }
+
+        textarea {
+            min-height: 100px;
+            max-height: 100px;
+            max-width: 100%;
+        }
+
+        .botonF {
+            background: $BordoOscuro;
+            color: $Amarillo;
+            padding: 20px;
+        }
+      
+    }
+
+    .parrafoC {
+        color: $Amarillo;
+        background-color: $RojoOscuro;
+        font-size: 25px;
+        padding: 20px 40px;
+        border-radius: 7px;
+        width: 600px;
+
+    }
+}
+
+// media contacto
+
+@media (max-width: 1023px) {
+    .contacto {
+        background: linear-gradient(to bottom, white, $Amarillo);
+        padding-top: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+       
+        .tablaContacto {
+            background-color: $RojoOscuro;
+            width: 80%;
+            margin: auto;
+            padding: 20px 40px;
+            border-radius: 7px;
+    
+            .TC {
+                color: $Amarillo;
+                text-align: center;
+                margin: 0;
+                font-size: 20px;
+            }
+        }
+
+        .formulario {
+            width: 80%;
+            margin: auto;
+            background-color: $RojoOscuro;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            margin-top: 20px;
+            border-radius: 7px;
+        
+    
+            .TF {
+                color: $Amarillo;
+                text-align: center;
+                margin: 0;
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+    
+            input, textarea {
+                width: 100%;
+                margin-bottom: 20px;
+                padding: 7px;
+                box-sizing: border-box;
+                font-size: 17px;
+            }
+    
+            textarea {
+                min-height: 100px;
+                max-height: 100px;
+                max-width: 100%;
+            }
+    
+            .botonF {
+                background: $BordoOscuro;
+                color: $Amarillo;
+                padding: 20px;
+            }
+          
+        }
+
+        .parrafoC {
+            color: $Amarillo;
+            background-color: $RojoOscuro;
+            font-size: 25px;
+            padding: 20px 40px;
+            border-radius: 7px;
+            width: 600px;
+            position: absolute;
+            top: -100%;
+        }
+
+        .ubicacion {
+            position: absolute;
+            top: -100%;
+        }
+    }
+    
+}
+
+// FOOTER 
+
+footer {
+    background-color: black;
+    border-top: 0.5px #ffd28f solid;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+
+    h5 {
+        color: $Amarillo;
+        border-bottom: 0.5px $Amarillo solid;
+        width: 300px;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .imgF {
+        position: relative;
+        left: 45%;
+    }    
+    .menuF {
+        margin: 10px auto;
+        width: 50%;
+        list-style: none;
+        text-align: center;
+        font-size: 15px;
+        padding-bottom: 10px;
+        
+       
+        li a {
+            text-decoration: none;
+            color: #ffd28f;
+
+        }
+
+    }
+}

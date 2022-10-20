@@ -1,0 +1,565 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+.estilosInicio, .estilosTrabajos, .estilosServicios {
+  background-image: url(../img1/fondoinicio.jpg);
+  background-position-y: 60%;
+}
+.estilosInicio header .logo, .estilosInicio header .estilosTrabajos .logoT, .estilosTrabajos header .logo, .estilosTrabajos header .logoT, .estilosInicio header .estilosServicios .logoS, .estilosTrabajos header .estilosServicios .logoS, .estilosServicios header .logo, .estilosServicios header .estilosTrabajos .logoT, .estilosServicios header .logoS {
+  position: relative;
+  top: 50%;
+  left: 30%;
+}
+.estilosInicio .menu, .estilosTrabajos .menu, .estilosTrabajos .menuT, .estilosServicios .menu, .estilosServicios .menuS {
+  width: 50%;
+  list-style: none;
+  text-align: center;
+  position: relative;
+  top: 45%;
+  left: 15%;
+  font-size: 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.estilosInicio .menu li a, .estilosTrabajos .menu li a, .estilosTrabajos .menuT li a, .estilosServicios .menu li a, .estilosServicios .menuS li a {
+  text-decoration: none;
+  color: #ffd28f;
+  padding: 15px;
+  border-left: 0.5px #ffd28f solid;
+  border-right: 0.5px #ffd28f solid;
+}
+.estilosInicio .redes, .estilosTrabajos .redes, .estilosTrabajos .redesT, .estilosServicios .redes, .estilosServicios .redesS {
+  position: relative;
+  left: 0.5%;
+}
+
+@media (max-width: 1024px) {
+  .estilosInicio, .estilosTrabajos, .estilosServicios {
+    background-image: none;
+    background-color: gray;
+  }
+  .estilosInicio header .logo, .estilosInicio header .estilosTrabajos .logoT, .estilosTrabajos header .logo, .estilosTrabajos header .logoT, .estilosInicio header .estilosServicios .logoS, .estilosTrabajos header .estilosServicios .logoS, .estilosServicios header .logo, .estilosServicios header .estilosTrabajos .logoT, .estilosServicios header .logoS {
+    position: relative;
+    top: 50%;
+    left: 5%;
+    width: 100px;
+  }
+  .estilosInicio .menu, .estilosTrabajos .menu, .estilosTrabajos .menuT, .estilosServicios .menu, .estilosServicios .menuS {
+    width: 100%;
+    list-style: none;
+    text-align: center;
+    position: relative;
+    top: 45%;
+    left: auto;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .estilosInicio .menu li a, .estilosTrabajos .menu li a, .estilosTrabajos .menuT li a, .estilosServicios .menu li a, .estilosServicios .menuS li a {
+    text-decoration: none;
+    color: #ffd28f;
+    padding: 15px;
+    border: none;
+  }
+}
+@media (max-width: 768px) {
+  .mainInicio, .mainServicios {
+    display: grid;
+    grid-template-areas: "Mu" "Md" "Mt";
+  }
+  .mainInicio .mainInicioUno, .mainServicios .mainInicioUno, .mainServicios .mainServiciosUno {
+    grid-area: Mu;
+    position: relative;
+  }
+  .mainInicio .mainInicioUno .mainInicioImagen, .mainServicios .mainInicioUno .mainInicioImagen, .mainServicios .mainServiciosUno .mainInicioImagen, .mainServicios .mainServiciosUno .mainServiciosImagen {
+    border-radius: 6%;
+    width: 300px;
+  }
+  .mainInicio .mainInicioDos, .mainServicios .mainInicioDos, .mainServicios .mainServiciosDos {
+    margin: auto;
+    grid-area: Md;
+  }
+  .mainInicio .mainInicioDos .titulo, .mainServicios .mainInicioDos .titulo, .mainServicios .mainServiciosDos .titulo, .mainServicios .mainServiciosDos .tituloS {
+    font-size: 1fr;
+    color: #cd0707;
+    width: 200px;
+  }
+  .mainInicio .mainInicioDos .parrafoInicioUno, .mainServicios .mainInicioDos .parrafoInicioUno, .mainServicios .mainServiciosDos .parrafoInicioUno, .mainServicios .mainServiciosDos .parrafoServiciosUno {
+    font-size: 15px;
+    padding-top: 10%;
+    width: 350px;
+  }
+  .mainInicio .mainInicioTres, .mainServicios .mainInicioTres, .mainServicios .mainServiciosTres {
+    margin: 90px 5px;
+    border-left: 0.5px #8b1717 solid;
+    grid-area: Mt;
+  }
+  .mainInicio .mainInicioTres .Pmain, .mainServicios .mainInicioTres .Pmain, .mainServicios .mainServiciosTres .Pmain, .mainServicios .mainServiciosTres .PmainS, .mainServicios .mainServiciosTres .PmainSer {
+    font-size: 20px;
+    padding: 20px 30px;
+    font-style: italic;
+  }
+  .mainInicio .mainInicioTres .linkMainUno, .mainServicios .mainInicioTres .linkMainUno, .mainServicios .mainServiciosTres .linkMainUno {
+    color: #cd0707;
+  }
+  .asideInicio, .asideServicios {
+    display: grid;
+    grid-template-areas: "Au" "Ad" "At";
+    background-color: #8b1717;
+  }
+  .asideInicio .asideInicioUno, .asideServicios .asideInicioUno {
+    margin: 90px 40px;
+    grid-area: Au;
+  }
+  .asideInicio .asideInicioUno .asideInicioImagen, .asideServicios .asideInicioUno .asideInicioImagen {
+    border-radius: 6%;
+    width: 300px;
+  }
+  .asideInicio .asideInicioDos, .asideServicios .asideInicioDos {
+    margin: 90px 5px;
+    grid-area: Ad;
+  }
+  .asideInicio .asideInicioDos .tituloDos, .asideServicios .asideInicioDos .tituloDos {
+    font-size: 1fr;
+    color: #ffd28f;
+    font-weight: 1300;
+    width: 100%;
+  }
+  .asideInicio .asideInicioTres, .asideServicios .asideInicioTres {
+    margin: 90px 5px;
+    border-left: 0.5px #cd0707 solid;
+    grid-area: At;
+  }
+  .asideInicio .asideInicioTres .Paside, .asideServicios .asideInicioTres .Paside {
+    font-size: 20px;
+    padding: 20px 30px;
+    font-style: italic;
+    color: #ffd28f;
+    background-color: black;
+  }
+  .asideInicio .asideInicioTres .linkAside, .asideServicios .asideInicioTres .linkAside {
+    color: white;
+  }
+}
+@media (max-width: 1023px) {
+  .mainInicio, .mainServicios {
+    display: grid;
+    grid-template-areas: "Mu" "Md" "Mt";
+  }
+  .mainInicio .mainInicioUno, .mainServicios .mainInicioUno, .mainServicios .mainServiciosUno {
+    grid-area: Mu;
+    position: relative;
+  }
+  .mainInicio .mainInicioUno .mainInicioImagen, .mainServicios .mainInicioUno .mainInicioImagen, .mainServicios .mainServiciosUno .mainInicioImagen, .mainServicios .mainServiciosUno .mainServiciosImagen {
+    border-radius: 6%;
+    width: 150px;
+  }
+}
+.mainInicio, .mainServicios {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+}
+.mainInicio .mainInicioUno, .mainServicios .mainInicioUno, .mainServicios .mainServiciosUno {
+  margin: 90px 40px;
+}
+.mainInicio .mainInicioUno .mainInicioImagen, .mainServicios .mainInicioUno .mainInicioImagen, .mainServicios .mainServiciosUno .mainInicioImagen, .mainServicios .mainServiciosUno .mainServiciosImagen {
+  border-radius: 6%;
+}
+.mainInicio .mainInicioDos, .mainServicios .mainInicioDos, .mainServicios .mainServiciosDos {
+  margin: 90px 5px;
+}
+.mainInicio .mainInicioDos .titulo, .mainServicios .mainInicioDos .titulo, .mainServicios .mainServiciosDos .titulo, .mainServicios .mainServiciosDos .tituloS {
+  font-size: 1fr;
+  color: #cd0707;
+  font-weight: 1300;
+}
+.mainInicio .mainInicioDos .parrafoInicioUno, .mainServicios .mainInicioDos .parrafoInicioUno, .mainServicios .mainServiciosDos .parrafoInicioUno, .mainServicios .mainServiciosDos .parrafoServiciosUno {
+  font-size: 25px;
+  padding-top: 10%;
+  width: 350px;
+}
+.mainInicio .mainInicioTres, .mainServicios .mainInicioTres, .mainServicios .mainServiciosTres {
+  margin: 90px 5px;
+  border-left: 0.5px #8b1717 solid;
+}
+.mainInicio .mainInicioTres .Pmain, .mainServicios .mainInicioTres .Pmain, .mainServicios .mainServiciosTres .Pmain, .mainServicios .mainServiciosTres .PmainS, .mainServicios .mainServiciosTres .PmainSer {
+  font-size: 20px;
+  padding: 20px 30px;
+  font-style: italic;
+  background-color: #ffd28f;
+}
+.mainInicio .mainInicioTres .linkMainUno, .mainServicios .mainInicioTres .linkMainUno, .mainServicios .mainServiciosTres .linkMainUno {
+  color: #cd0707;
+}
+
+.asideInicio, .asideServicios {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  background-color: #8b1717;
+}
+.asideInicio .asideInicioUno, .asideServicios .asideInicioUno {
+  margin: 90px 40px;
+}
+.asideInicio .asideInicioUno .asideInicioImagen, .asideServicios .asideInicioUno .asideInicioImagen {
+  border-radius: 6%;
+}
+.asideInicio .asideInicioDos, .asideServicios .asideInicioDos {
+  margin: 90px 5px;
+}
+.asideInicio .asideInicioDos .tituloDos, .asideServicios .asideInicioDos .tituloDos {
+  font-size: 1fr;
+  color: #ffd28f;
+  font-weight: 1300;
+}
+.asideInicio .asideInicioTres, .asideServicios .asideInicioTres {
+  margin: 90px 5px;
+  border-left: 0.5px #cd0707 solid;
+}
+.asideInicio .asideInicioTres .Paside, .asideServicios .asideInicioTres .Paside {
+  font-size: 20px;
+  padding: 20px 30px;
+  font-style: italic;
+  color: #ffd28f;
+}
+.asideInicio .asideInicioTres .linkAside, .asideServicios .asideInicioTres .linkAside {
+  color: white;
+}
+
+.estilosServicios {
+  background-image: url(../img1/fondoservicios.jpg);
+}
+.estilosServicios .menuS .botonS {
+  background-color: #66190e;
+}
+.mainServicios {
+  background: linear-gradient(to top, #66190e, #8b1717, white, white, white, white, white);
+}
+.mainServicios .mainServiciosTres {
+  border: 0px;
+}
+.mainServicios .mainServiciosTres .PmainS, .mainServicios .mainServiciosTres .PmainSer {
+  border-radius: 15%;
+}
+.asideServicios {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: #66190e;
+}
+.asideServicios .tituloTres {
+  color: #ffd28f;
+  font-size: 60px;
+}
+.asideServicios .TaU {
+  color: #ffd28f;
+  border-bottom: 0.5px #ffd28f solid;
+  font-size: 30px;
+  width: 530px;
+  position: relative;
+  top: 10%;
+}
+.asideServicios .asideServiciosImagen {
+  position: relative;
+  top: 28%;
+  border-radius: 6%;
+}
+.asideServicios .PasideS {
+  color: white;
+  font-size: 20px;
+  position: relative;
+  top: 15%;
+  width: 400px;
+}
+
+@media (max-width: 1023px) {
+  .estilosServicios {
+    background-image: none;
+    background-color: grey;
+  }
+  .asideServicios {
+    position: absolute;
+    top: -1000%;
+  }
+  .mainServicios {
+    background: linear-gradient(to top, #66190e, #8b1717, white, white, white, white, white);
+  }
+  .mainServicios .mainServiciosTres {
+    border: 0px;
+  }
+  .mainServicios .mainServiciosTres .PmainS, .mainServicios .mainServiciosTres .PmainSer {
+    border-radius: 15%;
+    width: 200px-;
+  }
+}
+.estilosTrabajos {
+  background-image: url(../img1/fondotd.jpg);
+}
+.estilosTrabajos .menuT .botonT {
+  background-color: #66190e;
+}
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 40px 20px 0 20px;
+}
+.contenedor .encabezado {
+  width: 50%;
+  padding-bottom: 50px;
+}
+.contenedor .encabezado .tituloTD {
+  font-size: 1fr;
+  font-weight: bolder;
+  border-bottom: 3px solid #8b1717;
+  color: #8b1717;
+  padding-bottom: 10px;
+}
+.contenedor .caja {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.contenedor .caja .trabajos {
+  display: flex;
+  flex-direction: column;
+  width: 32.5%;
+}
+.contenedor .caja .trabajos img {
+  width: 100%;
+  padding-bottom: 15px;
+  border-radius: 5px;
+}
+
+.gn {
+  margin: 100px 50px;
+  display: grid;
+  grid-template-areas: "parra imgn";
+}
+.gn .parrafon {
+  font-size: 30px;
+  color: #66190e;
+  width: 50%;
+  position: relative;
+  left: 1%;
+  grid-area: parra;
+}
+.gn .imgn {
+  grid-area: imgn;
+  position: absolute;
+  right: 10%;
+  border-radius: 7px;
+}
+
+@media (max-width: 768px) {
+  .gn {
+    margin: 100px 50px;
+    display: grid;
+    grid-template-areas: "parra imgn";
+  }
+  .gn .parrafon {
+    font-size: 15px;
+    color: #66190e;
+    width: 100%;
+    position: relative;
+    left: 1%;
+    grid-area: parra;
+    text-align: center;
+  }
+  .gn .imgn {
+    grid-area: imgn;
+    position: absolute;
+    top: -100%;
+    border-radius: 7px;
+  }
+}
+@media (max-width: 1023px) {
+  .gn {
+    margin: 100px 50px;
+    display: grid;
+    grid-template-areas: "parra imgn";
+  }
+  .gn .parrafon {
+    font-size: 15px;
+    color: #66190e;
+    width: 100%;
+    position: relative;
+    left: 1%;
+    grid-area: parra;
+    text-align: center;
+  }
+  .gn .imgn {
+    grid-area: imgn;
+    position: absolute;
+    top: -100%;
+    border-radius: 7px;
+  }
+}
+.contacto {
+  background: linear-gradient(to bottom, white, #ffd28f);
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contacto .tablaContacto {
+  background-color: #8b1717;
+  width: 450px;
+  margin: auto;
+  padding: 20px 40px;
+  border-radius: 7px;
+}
+.contacto .tablaContacto .TC {
+  color: #ffd28f;
+  text-align: center;
+  margin: 0;
+  font-size: 20px;
+}
+.contacto .formulario {
+  width: 450px;
+  margin: auto;
+  background-color: #8b1717;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  border-radius: 7px;
+}
+.contacto .formulario .TF {
+  color: #ffd28f;
+  text-align: center;
+  margin: 0;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.contacto .formulario input, .contacto .formulario textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 7px;
+  box-sizing: border-box;
+  font-size: 17px;
+}
+.contacto .formulario textarea {
+  min-height: 100px;
+  max-height: 100px;
+  max-width: 100%;
+}
+.contacto .formulario .botonF {
+  background: #66190e;
+  color: #ffd28f;
+  padding: 20px;
+}
+.contacto .parrafoC {
+  color: #ffd28f;
+  background-color: #8b1717;
+  font-size: 25px;
+  padding: 20px 40px;
+  border-radius: 7px;
+  width: 600px;
+}
+
+@media (max-width: 1023px) {
+  .contacto {
+    background: linear-gradient(to bottom, white, #ffd28f);
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .contacto .tablaContacto {
+    background-color: #8b1717;
+    width: 80%;
+    margin: auto;
+    padding: 20px 40px;
+    border-radius: 7px;
+  }
+  .contacto .tablaContacto .TC {
+    color: #ffd28f;
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+  }
+  .contacto .formulario {
+    width: 80%;
+    margin: auto;
+    background-color: #8b1717;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+  }
+  .contacto .formulario .TF {
+    color: #ffd28f;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .contacto .formulario input, .contacto .formulario textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+  }
+  .contacto .formulario textarea {
+    min-height: 100px;
+    max-height: 100px;
+    max-width: 100%;
+  }
+  .contacto .formulario .botonF {
+    background: #66190e;
+    color: #ffd28f;
+    padding: 20px;
+  }
+  .contacto .parrafoC {
+    color: #ffd28f;
+    background-color: #8b1717;
+    font-size: 25px;
+    padding: 20px 40px;
+    border-radius: 7px;
+    width: 600px;
+    position: absolute;
+    top: -100%;
+  }
+  .contacto .ubicacion {
+    position: absolute;
+    top: -100%;
+  }
+}
+footer {
+  background-color: black;
+  border-top: 0.5px #ffd28f solid;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+}
+footer h5 {
+  color: #ffd28f;
+  border-bottom: 0.5px #ffd28f solid;
+  width: 300px;
+  text-align: center;
+  margin: auto;
+}
+footer .imgF {
+  position: relative;
+  left: 45%;
+}
+footer .menuF {
+  margin: 10px auto;
+  width: 50%;
+  list-style: none;
+  text-align: center;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+footer .menuF li a {
+  text-decoration: none;
+  color: #ffd28f;
+}/*# sourceMappingURL=sass.css.map */
